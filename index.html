@@ -75,6 +75,7 @@
 
 
 <!-- 页面会渲染多个div -->
+<h2>div渲染</h2>
 		<div v-for="(user,index) in users">
 			<h3>{{index+1}}.{{user.name}}</h3>
 			<p>
@@ -82,6 +83,7 @@
 			</p>
 		</div>
 <!-- 页面不会渲染多个template -->
+<h2>template 渲染</h2>
 		<template v-for="(user,index) in users">
 			<h3>{{index+1}}.{{user.name}}</h3>
 			<p>

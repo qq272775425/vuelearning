@@ -66,3 +66,27 @@ new Vue({
 //动态绑定
 //静态绑定: class <h1 v-bind:class="{red:false/true ,blue:false/true}">
 //vue 条件语句 v-if
+//组件
+
+
+
+Vue.component("greeting",{
+	template:`
+	<p>
+		{{name}}:大家好给大家介绍一下我的女神@靳玉婷
+		<button v-on:click="chngeName">改名</button>
+	</p>
+	`,//``这个符号是es6的语法支持字符串换行 是不是很牛逼
+	data:function(){
+		return{
+			name:"york"
+		}
+	},
+	methods:{
+		chageName:function(){
+			this.name = "jack";
+		}
+	}
+})
+//所有的东西都是使用templete动态添加到html中 减少dom结构 在后台渲染减少回流重绘
+//component vue调用组件的内置函数
