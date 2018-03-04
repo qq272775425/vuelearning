@@ -6,13 +6,25 @@ new Vue({
 		// job:"job",
 		// website:"http://haofanmedia.com",
 		// websiteTag:"<a href='http://haofanmeida.com'>标签</a>"
-		   age:"25"
+		   age:25,
+		   x:0,
+		   y:0
 	},
-	// methods:{
+	methods:{
+		add:function(inc){
+			this.age+=inc;
+		},sbutract:function(dec){
+			this.age-=dec;
+		},
+		updateXY:function(event){
+			console.log(event);
+			this.x = event.offsetX;
+			this.y = event.offsetY;
+		}
 	// 	greet:function(time){
 	// 		return 'good '+time+'!';
 	// 	}
-	// }
+	}
 });
 
 
@@ -20,3 +32,4 @@ new Vue({
 //data 用以数据的存贮 设置各种数据 data是一个对象 他的key和value的值是自己定义的
 // methods 用于存储各种方法
 //data-binding:给属性绑定对应的值
+//事件修饰符 实现阻止冒泡

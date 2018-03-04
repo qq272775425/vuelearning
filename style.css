@@ -1,0 +1,9 @@
+#canvers{
+	width: 600px;
+	padding: 200px;
+	text-align: center;
+	border:1px solid black;
+}
+#canvers span{
+	border: 1px solid black;
+}
