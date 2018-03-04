@@ -6,24 +6,36 @@ new Vue({
 		// job:"job",
 		// website:"http://haofanmedia.com",
 		// websiteTag:"<a href='http://haofanmeida.com'>标签</a>"
-		   age:25,
+		   name:"",
+		   age:"",
 		   x:0,
 		   y:0
 	},
 	methods:{
-		add:function(inc){
-			this.age+=inc;
-		},sbutract:function(dec){
-			this.age-=dec;
-		},
-		updateXY:function(event){
-			console.log(event);
-			this.x = event.offsetX;
-			this.y = event.offsetY;
-		}
+		// add:function(inc){
+		// 	this.age+=inc;
+		// },sbutract:function(dec){
+		// 	this.age-=dec;
+		// },
+		// updateXY:function(event){
+			// console.log(event);
+			// this.x = event.offsetX;
+			// this.y = event.offsetY;
+
+		// }
 	// 	greet:function(time){
 	// 		return 'good '+time+'!';
 	// 	}
+
+
+
+	logname:function(){
+		this.name = this.$refs.name.value;
+	},
+	logage:function(){
+		this.age = this.$refs.age.value;
+	}
+
 	}
 });
 
