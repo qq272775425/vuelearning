@@ -6,10 +6,25 @@ new Vue({
 		// job:"job",
 		// website:"http://haofanmedia.com",
 		// websiteTag:"<a href='http://haofanmeida.com'>标签</a>"
-		   name:"",
-		   age:"",
-		   x:0,
-		   y:0
+		   // name:"",
+		   // age:"",
+		   // x:0,
+		   // y:0
+
+
+		   // error:false,
+		   // success:false
+
+
+		   characters:["did","嘻嘻","asukdasdjahk"],
+		   users:[
+		   {name:"asdasdas",age:"23"},
+		   {name:"asdasda",age:"23"},
+		   {name:"asdaqweqweweqwsdas",age:"23"},
+		   {name:"asdaerwrwesdas",age:"23"}
+
+
+		   ]
 	},
 	methods:{
 		// add:function(inc){
@@ -29,12 +44,12 @@ new Vue({
 
 
 
-	logname:function(){
-		this.name = this.$refs.name.value;
-	},
-	logage:function(){
-		this.age = this.$refs.age.value;
-	}
+	// logname:function(){
+	// 	// this.name = this.$refs.name.value;
+	// },
+	// logage:function(){
+	// 	// this.age = this.$refs.age.value;
+	// }
 
 	}
 });
@@ -45,3 +60,9 @@ new Vue({
 // methods 用于存储各种方法
 //data-binding:给属性绑定对应的值
 //事件修饰符 实现阻止冒泡
+//双向绑定 在html标签中加入 ref="xxx"在app.js中通过refs接过来
+//v-model属性添加到html标签中值为data对象中的属性名,此时会将data中的
+//计算属性
+//动态绑定
+//静态绑定: class <h1 v-bind:class="{red:false/true ,blue:false/true}">
+//vue 条件语句 v-if

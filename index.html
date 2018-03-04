@@ -36,21 +36,58 @@
 			{{x}},{{y}}-<span v-on:mousemove.stop=""> stop Moving</span>
 		</div>	-->
 
+
+
+<!--
 		<h1> 键盘events 双向事件绑定 input select textarea</h1>
 		<label>姓名:</label>
-		<input ref="name" type="text" name="" v-on:keyup.enter="logname">
-		<span>{{name}}</span><!--触发enter修饰符,修饰符可以使用链式操作.enter.alt enter和alt同时抬起才会触发logname事件-->
+		<input ref="name" type="text" name=""  v-model="name">
+		<span>{{name}}</span>触发enter修饰符,修饰符可以使用链式操作.enter.alt enter和alt同时抬起才会触发logname事件
 		<label>年龄:</label>
-		<input ref="age" type="text" name="" v-on:keyup.enter="logage">
+		<input ref="age" type="text" name=""  v-model="age">
 		<span>{{age}}</span>
-		
+		 #}-->
 
 
+<!--
+		<h1>v-if 条件</h1>
+		<button v-on:click="error = !error">error</button>
+		<button v-on:click="success = !success">success</button>
+		<p v-if="error"> 网络连接错误</p>
+		<p v-else-if="success">网络连接成功</p>
+-->
+		<h1>v-for 循环</h1>
+		<!--数组下标获取-->
+		{{characters[0]}};
+		{{characters[1]}};
+		{{characters[2]}};
+		<!--数组遍历-->
+		<ul>
+			<li v-for="character in characters">
+				{{character}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(user,index) in users">
+				{{index+1}}.user:{{user.name}}-age:{{user.age}}
+			</li>
+		</ul>
 
-		
 
-
-
+<!-- 页面会渲染多个div -->
+		<div v-for="(user,index) in users">
+			<h3>{{index+1}}.{{user.name}}</h3>
+			<p>
+				age-{{user.age}}
+			</p>
+		</div>
+<!-- 页面不会渲染多个template -->
+		<template v-for="(user,index) in users">
+			<h3>{{index+1}}.{{user.name}}</h3>
+			<p>
+				age-{{user.age}}
+			</p>
+		</template>
 	</div>
 	<script type="text/javascript" src="app.js"></script>
 </body>
