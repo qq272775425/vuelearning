@@ -67,7 +67,7 @@ new Vue({
 //静态绑定: class <h1 v-bind:class="{red:false/true ,blue:false/true}">
 //vue 条件语句 v-if
 //组件
-
+//实例化多个vue对象
 
 
 Vue.component("greeting",{
@@ -90,3 +90,18 @@ Vue.component("greeting",{
 })
 //所有的东西都是使用templete动态添加到html中 减少dom结构 在后台渲染减少回流重绘
 //component vue调用组件的内置函数
+
+
+
+//脚手架:Vue CLI 脚手架
+//脚手架是通过webpack搭建的开发环境
+//优点在于
+//使用es6语法,不需要考虑兼容性 后台会自动把es6转换成浏览器识别的语法
+//打包压缩js文件为一个文件 
+//项目文件是在环境中编译而不是在浏览器
+//实现页面的自动刷新功能,ide中保存浏览器自动刷新
+
+
+脚手架的安装 在nodejs环境下安装
+测试node -v 测试node版本号 6.9以上
+npm-v 3.1 以上
